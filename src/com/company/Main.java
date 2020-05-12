@@ -1,21 +1,22 @@
 package com.company;
 
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
-        int n;
+        EdgeListGraph<String> grap = new EdgeListGraph();
 
-        Scanner s = new Scanner(System.in);
-        n=s.nextInt();
-        int t=0;
-        while(n>0){
-            int i=n%10;
-            n=n/10;
-            t=t+i*10;
-        }
-            System.out.println(t);
-        
+//        grap.addVertex("Mona");
+//        grap.addVertex("Mohan");
+//        grap.addEdge("Mona","Mohan");
+//        grap.showRelation();
+        AdjancyGraph<String> graph = new AdjancyGraph<String>();
+        graph.addVertex("Mona");
+        graph.addVertex("Mohan");
+        graph.addVertex("Shubham");
+        graph.addVertex("Shobit");
+        graph.addEdge("Mohan","Shobit");
+        graph.addEdge("Mona","Shubham");
+        graph.addEdge("Shobit","Shubham");
+        graph.showRelation();
     }
 }
